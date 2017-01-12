@@ -1,0 +1,5 @@
+org/me/example/helloworld/Hello.class
+demo/jaxrs/server/CustomerService.class
+demo/jaxrs/server/Product.class
+demo/jaxrs/server/Customer.class
+demo/jaxrs/server/Order.class
