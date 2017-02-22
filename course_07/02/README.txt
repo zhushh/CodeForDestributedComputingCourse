@@ -3,12 +3,18 @@ How to run?
 
 Exec the following command in the root of project
 
+```
+$ mvn clean
+$ mvn compile
 $ mvn -Pserver
+```
 
-then open the address: http://localhost:9000/customerservice/customers/123
-
+Open another terminal and access to the same directory, then execute the following command to start client:
+```
+$ mvn -Pclient
+```
 
 Reference blog
 ----
 
-https://github.com/zhushh/Note/blob/master/webService%E5%AD%A6%E4%B9%A0/webService_02_web_service%E6%A1%86%E6%9E%B6CXF%E5%AD%A6%E4%B9%A0.md
+https://github.com/zhushh/Note/tree/master/webService%E5%AD%A6%E4%B9%A0
