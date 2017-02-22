@@ -35,11 +35,11 @@ public final class MyClient {
         System.out.println("Sent HTTP PUT request to update customer info");
         MyClient myClient = new MyClient();
         String inputFile = myClient.getClass().getResource("/update_customer.xml").getFile();
-        inputFile = readStringFromFile(inputFile);
-        System.out.println("\nInputFile: " + inputFile);
+        String fileContent = readStringFromFile(inputFile);
 
         Response postResponse = customers.request(MediaType.APPLICATION_XML_TYPE)
-                                        .post(Entity.entity(inputFile, MediaType.APPLICATION_XML_TYPE));
+                                        .post(Entity.entity(fileContent, MediaType.APPLICATION_XML_TYPE));
+
         System.out.println("Response status code: " + postResponse.getStatus());
         System.out.println("Response body: ");
         System.out.println(postResponse.readEntity(String.class));
@@ -48,11 +48,11 @@ public final class MyClient {
         System.out.println("\n");
         System.out.println("Sent HTTP POST request to add customer");
         inputFile = myClient.getClass().getResource("/add_customer.xml").getFile();
-        inputFile = readStringFromFile(inputFile);
-        System.out.println("\nInputFile: " + inputFile);
+        fileContent = readStringFromFile(inputFile);
 
         postResponse = customers.request(MediaType.APPLICATION_XML_TYPE)
-                                .post(Entity.entity(inputFile, MediaType.APPLICATION_XML_TYPE));
+                                .post(Entity.entity(fileContent, MediaType.APPLICATION_XML_TYPE));
+
         System.out.println("Response status code: " + postResponse.getStatus());
         System.out.println("Response body: ");
         System.out.println(postResponse.readEntity(String.class));
