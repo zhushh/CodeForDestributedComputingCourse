@@ -9,7 +9,7 @@ class AccountException {
 			} catch (OutOfMoney exc) {
 				exc.printStackTrace();
 			} finally {
-				System.out.println("finally 语句块中的语句总是会执行！");
+				System.out.println("finally statements will always be excuted!");
 			}
 
 			amount = amount - 300;
